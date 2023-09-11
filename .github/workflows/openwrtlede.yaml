@@ -13,7 +13,7 @@
 #-------------------------------------------------------------------------------------------------------
 
 # Workflow name which is showed in GitHub Actions.
-name: openwrtlede
+name: Build Example-Firmware for Example-Device
 
 on:
   workflow_dispatch:
@@ -35,7 +35,7 @@ env:
   # You can modify the REPO_NAME to any name you want, but remember not to let it have the same name in 
   # other workflows.
   REPO_NAME: openwrtlede
-  REPO_URL: https://github.com/bright141/openwrtlede.git
+  REPO_URL: https://github.com/example/example.git
   REPO_BRANCH: example-branch
   BUILD_DEPENDS:  "ack antlr3 aria2 asciidoc autoconf automake autopoint binutils bison build-essential bzip2 \
                    ccache clang cmake cpio curl device-tree-compiler fastjar file flex gawk gettext gcc-multilib \
