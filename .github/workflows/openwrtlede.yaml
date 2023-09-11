@@ -36,7 +36,7 @@ env:
   # other workflows.
   REPO_NAME: openwrtlede
   REPO_URL: https://github.com/bright141/openwrtlede.git
-  REPO_BRANCH: 
+  REPO_BRANCH: openwrtlede
   BUILD_DEPENDS:  "ack antlr3 aria2 asciidoc autoconf automake autopoint binutils bison build-essential bzip2 \
                    ccache clang cmake cpio curl device-tree-compiler fastjar file flex gawk gettext gcc-multilib \
                    g++ g++-multilib git gperf haveged help2man intltool libc6-dev-i386 libelf-dev libglib2.0-dev \
@@ -77,7 +77,6 @@ jobs:
       - name: Get Commit Hash
         id: get-hash
         run: |
-          git clone --depth 1 --branch $REPO_BRANCH --single-branch $REPO_URL ./
           echo "commit-hash=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
 
       - name: Compare Commit Hash
